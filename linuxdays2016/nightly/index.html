@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Nightly a experimentální prohlížeče</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="../_common/themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Nightly a experimentální prohlížeče</h1>
+    <p class="footer">
+      Michal Stanke <a href="mailto:mstanke@mozilla.cz">&lt;mstanke@mozilla.cz&gt;</a>,<br>
+      <a href="https://twitter.com/MozillaCZ">@MozillaCZ</a>,<br>
+      LinuxDays 2016, Praha
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstrakt: </strong>
+       Mozilla nabízí nespočet verzí Firefoxu. Znáte je všechny? Firefox, Firefox beta, Firefox Developer Edition, ... a jako třešnička Nightly. Zmíníme ale i ryze experimentální projekty, jako je Servo nebo Tofino.
+    </p>
+  </aside>
+
+  <div id="kolik-je-firefoxu" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Kolik je Firefoxů</div>
+        </h2>
+      </header>
+      <footer class="notes">
+        Mnoho verzí (kanálů)<br>
+        [finální vydání, Beta, DevEdition/Aurora, Nightly] *2 (Android)
+      </footer>
+    </section>
+  </div></div>  
+  
+  <div id="nightly" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Proč Nightly</div>
+        </h2>
+      </header>
+      <img src="../_common/img/nightly.png" alt="Electrolysis" class="right" style="max-width: 70%">
+      <ul>
+        <li>kolik lidí jej používá</li>
+        <li>(ne)stabilní</li>
+        <li>testování HW konfigurací</li>
+        <li>hlášení chyb</li>
+        <li>pro zkušené a zvědavé</li>
+      </ul>
+      <footer class="notes">
+        Tipněte si, kolik lidí Nightly používá?<br>
+        Nightly je (ne)stabilní<br>
+        Co Nightly Mozilla přínáší?<br>
+        Můžete si vyzkoušet nové funkce hned první den, ale musíte s Firefoxem trochu umět.
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="servo" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Servo</div>
+        </h2>
+      </header>
+      <img src="../_common/img/doge.png" class="right" alt="Doge" style="max-width: 30%;">
+      <ul>
+        <li>výzkum</li>
+        <li>vlastní komunita</li>
+        <li>napsáno v Rustu</li>
+        <li>embedování a aplikace</li>
+        <li>maximální paralelizace</li>
+        <li>sestavení pro Linux a OS X (<a href="https://servo.org/">servo.org</a>)</li>
+      </ul>
+      <footer class="notes">
+        Servo je stále ve fázi výzkumu<br>
+        okolo Rustu (a Serva) víceméně samostatná komunita<br>
+        webové aplikace oproti nativním jsou pomalé -> současné enginy nevyužívají možnosti hardwaru<br>
+        můžete si vyzkoušet ukázku v nighly buildu s rozhraním browser.html
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="tofino" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Tofino</div>
+        </h2>
+      </header>
+      <img src="../_common/img/mozilla-tofino.png" class="right" alt="Tofino" style="max-width: 30%;">
+      <ul>
+        <li>průzkum</li>
+        <li>interakce s prohlížečem</li>
+        <li>Electron</li>
+        <li><a href="https://github.com/mozilla/tofino">github.com/mozilla/tofino</a></li>
+      </ul>
+      <footer class="notes">
+        Koho zaujalo rozhraní browser.html?<br>
+        Zkušební projekt pro testování jiných paradigmat používání prohlížeče<br>
+        Dnes panely nahoře, lišty, tlačítka, ...<br>
+        Hlavně skicy a mockupy<br>
+        Zatím v nepřipraveném stavu a spíše PoC<br>
+        Příprava na experimenty
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="dekuji" class="slide"><div>
+    <section>
+      <header>
+        <h2>Děkuji</h2>
+      </header>
+      <img src="../_common/img/MozillaCZ-03.png" class="right" alt="logo Mozilla.cz">
+      <ul class="nobull">
+        <li>Michal Stanke</li>
+        <li><a href="https://twitter.com/MozillaCZ">@MozillaCZ</a></li>
+        <li><a href="https://www.mozilla.org/firefox/nightly/all/">mozilla.org/firefox/nightly/all</a></li>
+        <li><a href="https://blog.nightly.mozilla.org/">blog.nightly.mozilla.org</a></li>
+        <li><a href="https://servo.org/">servo.org</a></li>
+        <li><a href="https://www.rust-lang.org/">rust-lang.org</a></li>
+        <br>
+        <li><strong>Prezentace</strong>:<br>
+        <a href="http://www.mozilla.cz/soubory/prezentace/linuxdays2016/nightly">bit.ly/2d6npeq</a></li>
+      </ul>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="../_common/scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>

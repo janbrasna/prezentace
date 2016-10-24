@@ -1,0 +1,42 @@
+<html>
+  
+<!-- Mirrored from developer.mozilla.org/presentations/xtech2006/javascript/bigo.html by HTTrack Website Copier/3.x [XR&CO'2008], Wed, 21 Oct 2009 09:48:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+<head>
+  <script>
+    if (!Date.now)
+      Date.now = function () { return new Date().getTime() }
+
+    function Point1(x, y) {
+      this.x = x
+      this.y = y
+    }
+
+    function Point2(x, y) {
+      return {
+        getX: function () { return x },
+        getY: function () { return y }
+      }
+    }
+
+    function test(c, n) {
+      var a = [], start = Date.now()
+      for (var i = 0; i < n; i++)
+        a[i] = new c(i, i)
+      results.value = (Date.now() - start) + "ms";
+    }
+
+    var results;
+  </script>
+  </head>
+  <body onload="results = document.getElementById('results')">
+    <button onclick="test(Point1, 1e5)">Test public members</button>
+    <button onclick="test(Point2, 1e5)">Test private members</button>
+    <input id="results" type="text" size="20">
+    <p>
+    <iframe height="570" width="1000" src="view-source_http__/developer.mozilla.org/presentations/xtech2006/javascript/bigo.html">
+  </body>
+
+<!-- Mirrored from developer.mozilla.org/presentations/xtech2006/javascript/bigo.html by HTTrack Website Copier/3.x [XR&CO'2008], Wed, 21 Oct 2009 09:48:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8"><!-- /Added by HTTrack -->
+</html>

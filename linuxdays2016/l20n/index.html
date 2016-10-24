@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>L20n</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="../_common/themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>L20n</h1>
+    <p class="footer">
+      Michal Stanke <a href="mailto:mstanke@mozilla.cz">&lt;mstanke@mozilla.cz&gt;</a>,<br>
+      Michal Vašíček <a href="mailto:mvasicek@mozilla.cz">&lt;mvasicek@mozilla.cz&gt;</a>,<br>
+      <a href="https://twitter.com/MozillaCZ">@MozillaCZ</a>,<br>
+      LinuxDays 2016, Praha
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstrakt: </strong>
+       L20n je lokalizační framework a formát pro lokalizaci v JavaScriptu i Céčkového kódu Firefoxu. Předvedeme jeho použití při lokalizaci statické HTML stránky i demo živé lokalizace Firefoxu.
+    </p>
+  </aside>
+
+  <div id="l20n" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>
+          <div>L20n</div>
+        </h2>
+      </header>
+      <footer class="notes">
+        Localization 2.0</br>
+        Co to je, kdo na něm pracuje
+      </footer>
+    </section>
+  </div></div>  
+  
+  <div id="jak-funguje-lokalizace-ui" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Jak funguje lokalizace UI</div>
+        </h2>
+      </header>
+      <ul>
+        <li>vychází z angličtiny</li>
+        <li>množná čísla (v lepším případě)</li>
+        <li>mluvnické pády, jmenné rody, ...</li>
+      </ul>
+      <footer class="notes">
+        Musí umožnit všechny rozmanitosti jazyka -> dnes řeší vývojáři v kódu<br>
+        Jednoduchý překlad musí moci zůstat jednoduchý<br>
+        Tzn. možnosti jednoho jazyka nesmí prosakovat do druhého -> dnes řeší překladatelé<br>
+        Jako uživatel pak špatný pocit
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="jak-funguje-l20n" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Jak funguje L20n</div>
+        </h2>
+      </header>
+      <ul>
+        <li>izolace zodpovědnosti</li>
+        <li>formát FTL</li>
+        <li>množná čísla, rody i pády</li>
+      </ul>
+      <footer class="notes">
+        Vývojář píše kód<br>
+        My se staráme o překlad<br>
+        Logika a složitosti jednotlivých jazyků neovlivňují jiné
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="l20n-ukazky" class="slide oneline"><div>
+    <section>
+      <header>
+        <h2><strong>Je čas</strong> na ukázky</h2>
+      </header>
+      <footer class="notes">
+        FTL<br>
+        l20n.js<br>
+        Firefox
+      </footer>
+    </section>
+  </div></div>  
+
+  <div id="dekujeme" class="slide"><div>
+    <section>
+      <header>
+        <h2>Děkujeme</h2>
+      </header>
+      <img src="../_common/img/MozillaCZ-03.png" class="right" alt="logo Mozilla.cz">
+      <ul class="nobull">
+        <li>Michal Stanke</li>
+        <li>Michal Vašíček</li>
+        <li><a href="https://twitter.com/MozillaCZ">@MozillaCZ</a></li>
+        <li><a href="http://l20n.org/">l20n.org/</a></li>
+        <li><a href="https://github.com/l20n">github.com/l20n</a></li>
+        <br>
+        <li><strong>Prezentace</strong>:<br>
+        <a href="http://www.mozilla.cz/soubory/prezentace/linuxdays2016/l20n">bit.ly/2dikwMT</a></li>
+      </ul>
+
+    <footer class="notes">
+    </footer>
+
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="../_common/scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
