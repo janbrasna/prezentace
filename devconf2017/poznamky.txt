@@ -9,11 +9,44 @@
   - content process
   - plugins (GMP)
   - plugins (NPAPI) - windows only
-Rust
-  - paralelizmus
+- Quantum
+  - hotove komponenty ze Serva
+  - maximalni paralelizace a GPU
+  - iterativni implementace
+  - CSS (Stylo)
+        - v1 jen desktopove OS
+        - zadna ztrata CSS funkci
+        - zadne regrese na TOP 500 Alexa
+  - Render and Compositor
+        - GPU rederovani pomoci Servo WebRender
+        - nastabilni ovladace dnes pusoby pady
+        - diky oddeleni do samostatneho procesu mene padu
+  - DOM
+        - optimalizace vlivu panelu na pozadi
+        - misto vlastnich procesu pro kazdy panel (odhad max. 8) kooperativni planovani vlaken
+        - identifikace dulezitych panelu (Gmail potrebuje notifikace, YouTube prekravac) a ostatni pozastavovat
+  - Flow - vse ostatni, napr. optimalizace UI
+- Firefox ale prijde o
+  - NPAPI pro zasuvne moduly
+  - XUL doplnky -> WebExtensions a nove Themes API
+  - podporu Windows XP a Vista (~12%)
+- Test Pilot experimenty
+  - sber dat o pouzivani
+  - z uspesnych funkce ve Firefoxu
+  - z mene uspesnych bezne doplnky
 
 
 dema:
 - wayland
 - e10s
 - sandbox
+- servo (?)
+- Test Pilot
+
+bonusy:
+- kontejnerové panely
+- nova identita Mozilly
+- konecne pruraz pro Android
+- Firefox Focus
+- Prox
+
