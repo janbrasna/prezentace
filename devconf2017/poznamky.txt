@@ -1,0 +1,19 @@
+- Wayland - proc / vyhody / demo
+  - rychlost
+  - bezpecnost
+  - sandbox
+- e10s
+  - vice procesu
+- sandbox
+  - cely firefox (flatpak, firejail)
+  - content process
+  - plugins (GMP)
+  - plugins (NPAPI) - windows only
+Rust
+  - paralelizmus
+
+
+dema:
+- wayland
+- e10s
+- sandbox
