@@ -1,3 +1,3 @@
-# Prezentace Mozilla.cz
+# Mozilla.cz - prezentace
 
-V tomto repositáři najdete naše prezentace z konferencí, setkání a dalších akcí. Dostupné jsou i z webu na adrese `mozillacz.github.io/prezentace/nazev-adresare` (ze seznamu výše).
+V tomto repositáři najdete naše prezentace z konferencí, setkání a dalších akcí.
