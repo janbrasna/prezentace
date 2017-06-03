@@ -9,8 +9,14 @@
   <tbody>
     {% for post in site.posts %}
       {% if post.layout == 'slides' %}
+        {% assign first = post.link | slice: 0 %}
+        {% if first == "/" %}
+          {% assign talk_link = post.link | prepend: site.baseurl %}
+        {% else %}
+          {% assign talk_link = post.link %}
+        {% endif %}
         <tr>
-          <td><a href="{{ post.link | prepend: site.baseurl }}">{{ post.talk }}</a></td>
+          <td><a href="{{ talk_link }}">{{ post.talk }}</a></td>
           <td>{{ post.speaker }}</td>
           <td>{{ post.event }}</td>
         </tr>
