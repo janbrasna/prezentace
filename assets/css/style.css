@@ -1,0 +1,45 @@
+body {
+  background-color: #f9f9f9;
+  background-image: url("../img/bg-stone.png");
+  background-position: center top;
+  background-repeat: repeat-x;
+  margin: 3px 0;
+}
+
+#wrap {
+  margin: 0 auto;
+  max-width: 750px;
+}
+
+#tabzilla:before {
+  background-color: #bbb;
+}
+
+header {
+  padding: 60px 0 20px 0;
+}
+
+#logo {
+  text-align: center;
+}
+
+#logo img {
+  max-width: 75%;
+}
+
+#slides {
+  width: 100%;
+  border-spacing: 0;
+}
+
+#slides th {
+  background-color: #ddd;
+}
+
+#slides td, td {
+  width: 33%;
+  padding: .1em 1em;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+

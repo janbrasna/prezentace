@@ -1,1 +1,10 @@
+baseurl: "/prezentace"
+tabzillaurl: "https://www.mozilla.cz/"
+
+title: "Mozilla.cz - prezentace"
+language: "cs"
+
+permalink: pretty
+
 include: ["_common"]
+

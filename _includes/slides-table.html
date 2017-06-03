@@ -1,0 +1,21 @@
+<table id="slides">
+  <thead>
+    <tr>
+      <th>Téma</th>
+      <th>Přednášející</th>
+      <th>Událost</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for post in site.posts %}
+      {% if post.layout == 'slides' %}
+        <tr>
+          <td><a href="{{ post.link | prepend: site.baseurl }}">{{ post.talk }}</a></td>
+          <td>{{ post.speaker }}</td>
+          <td>{{ post.event }}</td>
+        </tr>
+      {% endif %}
+    {% endfor %}
+  </tbody>
+</table>
+
