@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+
+<head>
+  <meta charset="UTF-8">
+  {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
+  <title>{{ title }}</title>
+  <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: site.baseurl }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/responsive-bundle.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/tabzilla.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+</head>
+
+<body>
+  <div id="wrap">
+    <div id="tabzilla">
+      <a href="{{ site.tabzillaurl }}">Mozilla.cz</a>
+    </div>
+    <header>
+      <h1 id="logo">
+        <img src="{{ '/assets/img/logo.png' | prepend: site.baseurl }}" alt="Mozilla.cz">
+      </h1>
+    </header>
+    <main>
+      {{ content }}
+    </main>
+  </div>
+</body>
+
+</html>
+
