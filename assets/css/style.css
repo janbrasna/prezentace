@@ -8,7 +8,7 @@ body {
 
 #wrap {
   margin: 0 auto;
-  max-width: 750px;
+  max-width: 1000px;
 }
 
 #tabzilla:before {
@@ -24,7 +24,7 @@ header {
 }
 
 #logo img {
-  max-width: 75%;
+  max-width: 500px;
 }
 
 #slides {
@@ -37,9 +37,12 @@ header {
 }
 
 #slides td, td {
-  width: 33%;
   padding: .1em 1em;
   text-align: center;
   border-bottom: 1px solid #ddd;
+}
+
+#slides .recording {
+  width: 10%;
 }
 
