@@ -8,3 +8,8 @@ permalink: pretty
 
 include: ["_common"]
 
+exclude:
+ - [vendor]
+ - Gemfile
+ - Gemfile.lock
+
