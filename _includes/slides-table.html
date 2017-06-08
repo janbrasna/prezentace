@@ -12,7 +12,7 @@
       {% if post.layout == 'slides' %}
         {% assign first = post.link | slice: 0 %}
         {% if first == "/" %}
-          {% assign talk_link = post.link | prepend: site.baseurl %}
+          {% assign talk_link = post.link | prepend: "." %}
         {% else %}
           {% assign talk_link = post.link %}
         {% endif %}

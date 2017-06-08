@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
   <title>{{ title }}</title>
-  <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: site.baseurl }}">
+  <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: '.' }}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/font-awesome.min.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/responsive-bundle.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/tabzilla.css' | prepend: site.baseurl }}">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: site.baseurl }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/font-awesome.min.css' | prepend: '.' }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/responsive-bundle.css' | prepend: '.' }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/tabzilla.css' | prepend: '.' }}">
+  <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: '.' }}">
 </head>
 
 <body>
@@ -20,7 +20,7 @@
     </div>
     <header>
       <h1 id="logo">
-        <img src="{{ '/assets/img/logo.png' | prepend: site.baseurl }}" alt="Mozilla.cz">
+        <img src="{{ '/assets/img/logo.png' | prepend: '.' }}" alt="Mozilla.cz">
       </h1>
     </header>
     <main>
