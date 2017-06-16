@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<!-- <html lang="en-US"> -->
+<html lang="en-US">
+<!-- 
+  ^ a class of "fade" makes slides fade smoothly into one another
+ -->
+<!-- <html lang="en-US" class="nonumbers"> -->
+<!-- 
+  If you want no numbers on the slides add a "nonumbers" class 
+  to the HTML element.
+  Adding a class of "fade" will make slides fade into another. 
+-->
+<head>
+  <meta charset="UTF-8">
+  <title>Firefox v roce 2017</title>
+<!-- 
+  If you upload your slides to the web, ensure that you have 
+  a good title - this shows up in search results and social
+  media links
+ -->
+  <meta name="viewport" content="width=device-width, user-scalable=yes">
+  <link rel="stylesheet" href="./themes/mozilla/styles/style.css">
+</head>
+<body class="list">
+  <header class="caption">
+    <h1>Firefox v roce 2017</h1>
+    <p class="footer">
+      Michal Stanke <a href="mailto:mstanke@mozilla.cz">&lt;mstanke@mozilla.cz&gt;</a>,<br>
+      <a href="https:/twitter.com/MozillaCZ">@MozillaCZ</a>,<br>
+      OSS Víkend 2017, Bratislava
+    </p>
+  </header>
+  <aside class="talkdescription">
+    <p>This slide deck is using the shower system - roll over the previews to see the notes and click any slide to go into presentation mode. Then use keys to navigate. <button onclick="goFullScreen()">Go fullscreen</button></p>
+    <p class="abstract">
+      <strong>Abstrakt: </strong>
+       Firefox je známý prohlížeč, který Mozilla poprvé vydala v listopadu 2004. Letos, shodou okolností také v listopadu, ho ale čekají velké změny, možná největší za celou existenci. Pojďme si popovídat něco o projektech Quantum, Photon a některých experimentech.
+    </p>
+  </aside>
+
+  <div id="firefox-2017" class="slide shout"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Firefox<br> 2017</div>
+        </h2>
+      </header>
+    </section>
+  </div></div>
+  
+  <div id="firefox-a-kvalita" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Stalo se</div>
+        </h2>
+      </header>
+      <img src="./img/firefox.png" alt="Firefox" class="right" style="max-width: 20%">
+      <ul class="nobull">
+        <li>&#10013; staré systémy</li>
+        <li>&#10013; zásuvné moduly (výjimkou Flash)</li>
+      </ul>
+      <ul class="nobull">
+        <li>kratší vývojový cyklus</li>
+        <li>64-bit pro Windows</li>
+        <li>Firefox ve více procesech</li>
+        <li>Firefox v sandboxu</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="firefox-multi" class="slide"><div>
+    <section style="text-align:center;">
+      <img src="./img/firefox-multi.jpg" style="margin-top:1em; max-height:90%;" alt="Multi Firefox">
+    </section>
+  </div></div>
+
+  <div id="firefox-crash" class="slide"><div>
+    <section style="text-align:center;">
+      <img src="./img/mangle-the-meme-fox-firefox-has-crashed.jpg" style="margin-top:3em;" alt="FIREFOX HAS CRASHED">
+    </section>
+  </div></div>
+
+  <div id="quantum" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Quantum</div>
+        </h2>
+      </header>
+      <img src="./img/firefox-rust.png" alt="Firefox + Rust" class="right" style="max-width: 50%">
+      <ul class="nobull">
+        <li>na počátku bylo Servo</li>
+        <li>jádro nové generace</li>
+        <li>napsáno v Rustu</li>
+        <li>využití GPU</li>
+        <li>CSS, vykreslování, DOM, UI</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="photon" class="slide"><div>
+    <section>
+      <header>
+        <h2>
+          <div>Photon</div>
+        </h2>
+      </header>
+      <img src="./img/firefox.png" alt="Firefox" class="right" style="max-width: 20%">
+      <ul class="nobull">
+        <li>nové UI</li>
+        <li>i pro dotyková zařízení</li>
+        <li>počítač i mobily</li>
+      </ul>
+    </section>
+  </div></div>
+
+  <div id="photon-demo" class="slide"><div>
+    <section style="text-align:center;">
+      <img src="./img/brave-heart-freedom-to-the-demo-time-is-short-.jpg" style="margin-top:2em;" alt="TO THE DEMO">
+    </section>
+  </div></div>
+
+  <div id="dekuji" class="slide"><div>
+    <section>
+      <header>
+        <h2>Děkuji a stahujte ;)</h2>
+      </header>
+      <img src="./img/MozillaCZ-03.png" class="right" alt="logo Mozilla.cz">
+      <p style="margin-top:4em;">
+        <a href="https://getfirefox.com/">getfirefox.com</a>
+      </p>
+      <ul class="nobull">
+        <li>Michal Stanke</li>
+        <li><a href="https://twitter.com/MozillaCZ">@MozillaCZ</a></li>
+      </ul>
+    </section>
+  </div></div>
+
+  <!--
+    To hide progress bar from entire presentation
+    just remove “progress” element.
+    -->
+  <div class="progress"><div></div></div>
+  <script src="./scripts/script.js"></script>
+  <!-- Copyright © 2010–2012 Vadim Makeev — pepelsbey.net -->
+</body>
+</html>
