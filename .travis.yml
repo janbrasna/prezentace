@@ -7,10 +7,11 @@ branches:
     - gh-pages
 
 install:
- - gem install jekyll html-proofer
+ - bundle install
+ - gem install html-proofer
 
 script:
- - jekyll build && htmlproofer ./_site/index.html --disable-external
+ - bundle exec jekyll build && htmlproofer ./_site/index.html --disable-external
 
 env:
   global:
