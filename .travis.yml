@@ -1,10 +1,8 @@
 language: ruby
-rvm:
- - 2.3.3
 
 install:
  - bundle install
- - gem install html-proofer
+ - gem install html-proofer -v '~> 3.8'
 
 script:
  - bundle exec jekyll build && htmlproofer ./_site/index.html --disable-external
@@ -14,3 +12,5 @@ env:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
 
 sudo: false # route your build to the container-based infrastructure for a faster build
+
+cache: bundler
