@@ -20,10 +20,9 @@
           <td><a href="{{ talk_link }}">{{ post.talk }}</a></td>
           <td>{{ post.speaker }}</td>
           <td>{{ post.event }}</td>
-          <td>{% if post.recording %}<a href="{{ post.recording }}" class="fa fa-file-video-o" target="_blank"></a>{% endif %}</td>
+          <td>{% if post.recording %}<a href="{{ post.recording }}" class="fas fa-video" target="_blank"></a>{% endif %}</td>
         </tr>
       {% endif %}
     {% endfor %}
   </tbody>
 </table>
-

@@ -46,3 +46,6 @@ header {
   width: 10%;
 }
 
+#slides .fa-video:hover {
+  text-decoration: none;
+}
