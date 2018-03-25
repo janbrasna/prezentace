@@ -1,0 +1,29 @@
+{
+  "name": "Prezentace.Mozilla.cz",
+  "description": "Prezentace.Mozilla.cz",
+  "repository": {
+    "url": "https://github.com/MozillaCZ/prezentace",
+    "license": ""
+  },
+  "participate": {
+    "docs": "https://github.com/MozillaCZ/prezentace",
+    "irc": "irc://irc.mozilla.org/#l10n",
+    "irc-contacts": [
+      "MikkCZ"
+    ]
+  },
+  "bugs": {
+    "list": "https://github.com/MozillaCZ/prezentace/issues",
+    "report": "https://github.com/MozillaCZ/prezentace/issues/new"
+  },
+  "urls": {
+    "prod": "https://prezentace.mozilla.cz/"
+  },
+  "keywords": [
+    "Mozilla",
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "slides"
+  ]
+}
