@@ -2,32 +2,43 @@
 <html lang="{{ site.language }}">
 
 <head>
-  <meta charset="UTF-8">
-  {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
-  <title>{{ title }}</title>
-  <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: '.' }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/responsive-bundle.css' | prepend: '.' }}">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/tabzilla.css' | prepend: '.' }}">
-  <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: '.' }}">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    {% capture title %}{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}{% endcapture %}
+    <title>{{ title }}</title>
+    <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: '.' }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" media="screen" href="{{ '/assets/css/pebbles-bundle.77b559310b92.css' | prepend: '.' }}">
+    <link rel="stylesheet" media="screen" href="{{ '/assets/css/firefox-home-bundle.305b47d644e9.css' | prepend: '.' }}">
+    <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: '.' }}">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 </head>
 
 <body>
-  <div id="wrap">
-    <div id="tabzilla">
-      <a href="{{ site.tabzillaurl }}">Mozilla.cz</a>
-    </div>
-    <header>
-      <h1 id="logo">
-        <img src="{{ '/assets/img/logo.png' | prepend: '.' }}" alt="Mozilla.cz">
-      </h1>
+    <header id="masthead" class="section masthead">
+        <div class="content">
+            <h2 class="masthead-logo">
+                <a href="https://www.mozilla.cz/"><img src="{{ '/assets/img/logo.png' | prepend: '.' }}" alt="Mozilla.cz"></a>
+            </h2>
+            <div id="nav-download-firefox" class="download-button">
+                <a class="download-link button button-green" href="https://www.mozilla.org/cs/firefox/new/?scene=2&amp;from=firefoxcz">
+                    <strong class="download-title">Stáhnout Firefox</strong>
+                </a>
+            </div>
+            <nav class="masthead-nav-main" id="nav-main">
+                <span class="toggle" role="button">Menu</span>
+                <ul class="nav-main-menu" id="nav-main-menu">
+                    <li><a href="https://www.mozilla.cz/">Zprávičky</a></li>
+                    <li><a href="https://www.mozilla.cz/o-nas/">O nás</a></li>
+                    <li><a href="https://www.mozilla.cz/zapojte-se/">Zapojte se</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
-    <main>
-      {{ content }}
+
+    <main class="content">
+        {{ content }}
     </main>
-  </div>
 </body>
 
 </html>

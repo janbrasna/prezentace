@@ -1,51 +1,45 @@
 body {
-  background-color: #f9f9f9;
-  background-image: url("../img/bg-stone.png");
-  background-position: center top;
-  background-repeat: repeat-x;
-  margin: 3px 0;
+    font-size: 16px;
 }
 
-#wrap {
-  margin: 0 auto;
-  max-width: 1000px;
+/* Top header */
+
+#masthead .masthead-logo img {
+    max-width: none;
 }
 
-#tabzilla:before {
-  background-color: #bbb;
-}
-
-header {
-  padding: 60px 0 20px 0;
-}
-
-#logo {
-  text-align: center;
-}
-
-#logo img {
-  max-width: 500px;
-}
+/* Main area */
 
 #slides {
-  width: 100%;
-  border-spacing: 0;
+    width: 100%;
+    border-spacing: 0;
 }
 
 #slides th {
-  background-color: #ddd;
+    background-color: #eee;
 }
 
 #slides td, td {
-  padding: .1em 1em;
-  text-align: center;
-  border-bottom: 1px solid #ddd;
+    padding: .1em 1em;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+#slides a:link:not(:hover),
+#slides a:visited
+{
+    color: #09d;
+    text-decoration: none;
+}
+
+#slides a:hover {
+    color: #07a;
 }
 
 #slides .recording {
-  width: 10%;
+    width: 10%;
 }
 
 #slides .fa-video:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
