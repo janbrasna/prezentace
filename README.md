@@ -7,7 +7,7 @@ V tomto repositáři najdete naše prezentace z konferencí, setkání a další
 ## Instalace
 
 ```
-$ bundle install
+$ bundle install --path vendor/bundle
 $ bundle exec jekyll build
 $ bundle exec jekyll serve
 ```

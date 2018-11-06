@@ -10,4 +10,5 @@ include: ["_common"]
 exclude:
  - Gemfile
  - Gemfile.lock
+ - vendor
  - README.md
