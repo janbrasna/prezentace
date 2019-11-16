@@ -1,16 +1,26 @@
+dist: bionic
 language: ruby
-
-install:
- - bundle install
- - gem install html-proofer -v '~> 3.8'
+bundler_args: --path $HOME/.bundle --with test
+cache:
+  directories:
+    - $HOME/.bundle
+    - .jekyll-cache
 
 script:
- - bundle exec jekyll build && htmlproofer ./_site/index.html --disable-external
+ - bundle exec jekyll build
+ - bundle exec htmlproofer '_site' --disable-external
+
+before_deploy:
+ - touch _site/.nojekyll
+
+deploy:
+- provider: pages
+  skip-cleanup: true
+  local-dir: _site
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: master
 
 env:
   global:
   - NOKOGIRI_USE_SYSTEM_LIBRARIES=true # speeds up installation of html-proofer
-
-sudo: false # route your build to the container-based infrastructure for a faster build
-
-cache: bundler

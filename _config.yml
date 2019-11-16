@@ -1,14 +1,14 @@
-tabzillaurl: "https://www.mozilla.cz/"
-
 title: "Mozilla.cz - prezentace"
 language: "cs"
 
 permalink: pretty
 
-include: ["_common"]
-
+# Build settings
+markdown: kramdown
+include: [
+    '/_pages',
+]
 exclude:
- - Gemfile
- - Gemfile.lock
- - vendor
- - README.md
+  - vendor
+  - README.md
+  - CODE_OF_CONDUCT.md
