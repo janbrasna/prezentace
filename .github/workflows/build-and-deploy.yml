@@ -14,21 +14,12 @@ jobs:
       - name: Cache installed Ruby dependencies
         uses: actions/cache@v2
         env:
-          cache-name: ruby-dependencies
+          cache-name: vendor-bundle
         with:
           path: vendor/.bundle
-          key: ${{ runner.os }}_build_${{ env.cache-name }}_${{ hashFiles('Gemfile.lock') }}
+          key: ${{ runner.os }}_{{ github.job }}_${{ env.cache-name }}_${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}_build_${{ env.cache-name }}_
-      - name: Cache for Jekyll
-        uses: actions/cache@v2
-        env:
-          cache-name: jekyll-cache
-        with:
-          path: .jekyll-cache
-          key: ${{ runner.os }}_build_${{ env.cache-name }}_${{ hashFiles('config.yml') }}
-          restore-keys: |
-            ${{ runner.os }}_build_${{ env.cache-name }}_
+            ${{ runner.os }}_{{ github.job }}_${{ env.cache-name }}_
       - name: Build site
         run: make build_in_docker
       - name: Save built site for deploy
