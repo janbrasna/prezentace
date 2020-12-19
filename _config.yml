@@ -10,5 +10,6 @@ include: [
 ]
 exclude:
   - vendor
+  - Makefile
   - README.md
   - CODE_OF_CONDUCT.md
