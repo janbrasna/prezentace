@@ -11,15 +11,13 @@ jobs:
     steps:
       - name: Clone repository
         uses: actions/checkout@v2
-      - name: Cache installed Ruby dependencies
+      - name: Cache installed Gems for the project
         uses: actions/cache@v2
-        env:
-          cache-name: vendor-bundle
         with:
-          path: vendor/.bundle
-          key: ${{ runner.os }}_build_${{ env.cache-name }}_${{ hashFiles('Gemfile.lock') }}
+          path: vendor/bundle
+          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}_build_${{ env.cache-name }}_
+            ${{ runner.os }}-gems-
       - name: Build site
         run: make build_in_docker
       - name: Save built site for deploy
