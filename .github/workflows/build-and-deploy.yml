@@ -17,9 +17,9 @@ jobs:
           cache-name: vendor-bundle
         with:
           path: vendor/.bundle
-          key: ${{ runner.os }}_{{ github.job }}_${{ env.cache-name }}_${{ hashFiles('Gemfile.lock') }}
+          key: ${{ runner.os }}_build_${{ env.cache-name }}_${{ hashFiles('Gemfile.lock') }}
           restore-keys: |
-            ${{ runner.os }}_{{ github.job }}_${{ env.cache-name }}_
+            ${{ runner.os }}_build_${{ env.cache-name }}_
       - name: Build site
         run: make build_in_docker
       - name: Save built site for deploy
