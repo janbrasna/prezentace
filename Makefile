@@ -10,6 +10,7 @@ prepare:
 build:
 	bundle exec jekyll build
 	bundle exec htmlproofer '_site/index.html' $(HTML_PROOFER_OPTIONS)
+	touch _site/.nojekyll # avoid further processing by Jekyll in Github Pages
 
 build_in_docker:
 	docker pull $(CONTAINER_IMAGE)
