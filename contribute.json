@@ -6,11 +6,7 @@
     "license": ""
   },
   "participate": {
-    "docs": "https://github.com/MozillaCZ/prezentace",
-    "irc": "irc://irc.mozilla.org/#l10n",
-    "irc-contacts": [
-      "MikkCZ"
-    ]
+    "docs": "https://github.com/MozillaCZ/prezentace"
   },
   "bugs": {
     "list": "https://github.com/MozillaCZ/prezentace/issues",

@@ -1,35 +1,33 @@
-CONTAINER_IMAGE=docker.io/library/ruby:2.7-buster
-JEKYLL_ENV=production
-HTML_PROOFER_OPTIONS=--disable-external
+export JEKYLL_ENV=production
+HTML_PROOFER_OPTIONS=--disable-external --enforce-https false
 undefine BUNDLE_APP_CONFIG # let bundler use config from .bundle; in bash it would be 'unset BUNDLE_APP_CONFIG'
 
+.DEFAULT_GOAL := all
+.PHONY: all
+all: prepare build check
+
+.PHONY: prepare
 prepare:
-	gem install bundler -v "~> 2.0"
+	gem install bundler -v "~> 2.3"
 	bundle install
 
-build:
+.PHONY: clean
+clean:
+	bundle exec jekyll clean
+
+.PHONY: build
+build: clean
 	bundle exec jekyll build
-	bundle exec htmlproofer '_site/index.html' $(HTML_PROOFER_OPTIONS)
 	touch _site/.nojekyll # avoid further processing by Jekyll in Github Pages
 
-build_in_docker:
-	docker pull $(CONTAINER_IMAGE)
-	docker run --user $(id -u):$(id -g) \
-		--workdir $(PWD) \
-		-v $(PWD):$(PWD) \
-		--rm=true \
-		--entrypoint=/bin/sh \
-		-e JEKYLL_ENV=$(JEKYLL_ENV) \
-		-e LC_ALL='C.UTF-8' `# required for html-proofer to work correctly in the container` \
-		$(CONTAINER_IMAGE) -c 'make prepare && make build'
+.PHONY: check
+check:
+	bundle exec htmlproofer _site/index.html $(HTML_PROOFER_OPTIONS)
 
-build_in_podman:
-	podman pull $(CONTAINER_IMAGE)
-	podman run \
-		--workdir $(PWD) \
-		-v $(PWD):$(PWD):Z \
-		--rm=true \
-		--entrypoint=/bin/sh \
-		-e JEKYLL_ENV=$(JEKYLL_ENV) \
-		-e LC_ALL='C.UTF-8' `# required for html-proofer to work correctly in the container` \
-		$(CONTAINER_IMAGE) -c 'make prepare && make build'
+.PHONY: run
+run: clean
+	bundle exec jekyll serve
+
+.PHONY: all_in_container
+all_in_container:
+	JEKYLL_ENV=$(JEKYLL_ENV) bash ./scripts/run-in-container.sh make all

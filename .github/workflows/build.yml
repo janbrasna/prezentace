@@ -23,7 +23,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gems-
       - name: Build site
-        run: make build_in_docker
+        run: make all_in_container
       - name: Save built site for deploy
         uses: actions/upload-pages-artifact@v1
         with:
