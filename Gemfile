@@ -2,5 +2,5 @@ source 'https://rubygems.org'
 gem 'jekyll', '~> 4.3'
 
 group :test do
-  gem 'html-proofer', '~> 4.4', '>= 4.4.3'
+  gem 'html-proofer', '~> 5.0'
 end
