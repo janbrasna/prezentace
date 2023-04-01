@@ -18,7 +18,6 @@ clean:
 .PHONY: build
 build: clean
 	bundle exec jekyll build
-	touch _site/.nojekyll # avoid further processing by Jekyll in Github Pages
 
 .PHONY: check
 check:
