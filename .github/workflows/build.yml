@@ -25,7 +25,7 @@ jobs:
       - name: Build site
         run: make all_in_container
       - name: Save built site for deploy
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v3
         with:
           path: _site
           retention-days: 7
