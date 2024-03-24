@@ -1,0 +1,29 @@
+// Mozilla webfonts
+
+@font-face {
+    font-family: 'ZillaSlab';
+    font-weight: normal;
+    font-style: normal;
+    src: url('../fonts/ZillaSlab-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ZillaSlab';
+    font-weight: bold;
+    font-style: normal;
+    src: url('../fonts/ZillaSlab-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ZillaSlab';
+    font-weight: normal;
+    font-style: italic;
+    src: url('../fonts/ZillaSlab-Italic.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'ZillaSlab';
+    font-weight: bold;
+    font-style: italic;
+    src: url('../fonts/ZillaSlab-BoldRegular.woff2') format('woff2');
+}

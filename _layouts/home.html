@@ -7,15 +7,16 @@
     <title>{{ title }}</title>
     <link rel="icon" type="image/ico" href="{{ '/assets/img/favicon.ico' | prepend: '.' }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" media="screen" href="{{ '/assets/css/pebbles-bundle.77b559310b92.css' | prepend: '.' }}">
-    <link rel="stylesheet" media="screen" href="{{ '/assets/css/firefox-home-bundle.305b47d644e9.css' | prepend: '.' }}">
     <link rel="stylesheet" media="screen" href="{{ '/assets/css/style.css' | prepend: '.' }}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous">
 </head>
 
 <body>
-    <header id="masthead" class="section masthead">
+    
+  <div class="page-wrap">
+
+    <!--<header id="masthead" class="section masthead">
         <div class="content">
             <h2 class="masthead-logo">
                 <a href="https://www.mozilla.cz/"><img src="{{ '/assets/img/logo.png' | prepend: '.' }}" alt="Mozilla.cz"></a>
@@ -34,12 +35,90 @@
                 </ul>
             </nav>
         </div>
-    </header>
+    </header>-->
 
-    <main class="content">
+      
+      <!-- HEADER -->
+      <nav id="nav-global" class="nav-global can-stick">
+        <div class="header content">
+          <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
+          <div class="nav-mozilla">
+            <span class="toggle" role="button" aria-controls="nav-mozilla-menu" aria-expanded="false" tabindex="0">Menu</span>
+            <ul class="nav-mozilla-menu" id="nav-mozilla-menu">
+              <li class="nav-global-home"><a href="{{ '/' }}">home</a></li>
+              <li class="nav-global-fundamentals"><a href="{{ '/fundamentals/' }}">security fundamentals</a></li>
+              <li class="nav-global-guidelines"><a href="{{ '/guidelines/' }}">security guidelines</a></li>
+              <li class="nav-global-participate"><a href="{{ site.github.repository_url }}/blob/master/docs/{{ page.path }}">Improve this document</a></li>
+              <li class="nav-global-firefox"><a href="https://www.mozilla.org/firefox/products/" rel="external">Discover Firefox</a></li>
+            </ul>
+          </div>
+
+          <a class="page-top" href="#masthead" title="Go to the top of the page">Top</a>
+        </div>
+      </nav>
+
+      
+      
+      <!-- MAIN CONTENT -->
+      <div id="main_content_wrap" class="outer">
+        <section id="main_content" class="inner content">
         {{ content }}
-    </main>
+        </section>
+      </div>
 
+      
+    </div>
+
+    <!-- FOOTER  -->
+    <footer id="site-info" class="section">
+      <div class="content">
+        <section class="col col-1">
+          <div class="logo"><a href="https://www.mozilla.org" rel="external" title="Visit mozilla.org">Mozilla</a></div>
+          <p id="license" class="license">
+          ©2017 by individual contributors. Content available under a <a href="https://www.mozilla.org/foundation/licensing/website-content/" rel="external license">Creative Commons license</a>        </p>
+        </section>
+
+        <section class="col col-2">
+          <ul class="links-join">
+            <li><a href="https://www.mozilla.org/contact/">Contact Us</a></li>
+          </ul>
+
+          <ul class="links-legal">
+            <li><a href="https://www.mozilla.org/privacy/">Privacy</a></li>
+            <li class="wrap"><a href="https://www.mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+          </ul>
+        </section>
+
+        <section class="col col-3">
+          <ul class="links-social">
+            <li>
+              Security:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/mozillaSecurity">Twitter<span> (@mozillaSecurity)</span></a></li>
+              </ul>
+            </li>
+
+            <li>
+              Mozilla:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/mozilla">Twitter<span> (@mozilla)</span></a></li>
+                <li class="wrap"><a href="https://www.facebook.com/mozilla">Facebook<span> (Mozilla)</span></a></li>
+              </ul>
+            </li>
+            <li>
+              Firefox:
+              <ul>
+                <li class="wrap"><a href="https://twitter.com/firefox">Twitter<span> (@firefox)</span></a></li>
+                <li class="wrap"><a href="https://www.facebook.com/Firefox">Facebook<span> (Firefox)</span></a></li>
+                <li class="wrap"><a href="https://www.youtube.com/firefoxchannel">YouTube<span> (firefoxchannel)</span></a></li>
+              </ul>
+            </li>
+          </ul>
+        </section>
+      </div>
+    </footer>
+
+    
     <script type="text/javascript" src="{{ '/assets/js/analytics.js' | prepend: '.' }}"></script>
 </body>
 
