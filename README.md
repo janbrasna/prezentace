@@ -1,6 +1,6 @@
 # Mozilla.cz - prezentace
 
-[![Build Status](https://github.com/MozillaCZ/prezentace/workflows/.github/workflows/build-and-deploy.yml/badge.svg?branch=master)](https://github.com/MozillaCZ/prezentace/actions)
+[![Build Status](https://github.com/MozillaCZ/prezentace/actions/workflows/build.yml/badge.svg?branch=master)](https://github.com/MozillaCZ/prezentace/actions)
 
 V tomto repositáři najdete naše prezentace z konferencí, setkání a dalších akcí.
 
